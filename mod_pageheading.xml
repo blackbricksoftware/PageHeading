@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+	<name>Page Heading</name>
+	<version>0.0.1</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <author>Black Brick Software LLC</author>
+    <authorEmail>admin@blackbricksoftware.com</authorEmail>
+    <authorUrl>http://blackbricksoftware.com</authorUrl>
+    <copyright>Copyright © 2013-2013 Black Brick Software LLC. All rights reserved.</copyright>
+    <creationDate>4 August 2013</creationDate>
+    <description><![CDATA[<p>Page Heading for Joomla 3.1.x. Created by <a href="http://blackbricksoftware.com/" target="_blank">Black Brick Software LLC</a>.</p>]]></description>
+	<files>
+		<filename>CHANGELOG</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>LICENSE.GPL</filename>
+		<filename module="mod_pageheading">mod_pageheading.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="ignore_show_page_heading" type="list" default="1" label="Ignore Show Page Heading" description="">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="menu_title_backup" type="list" default="1" label="Use Menu Title If No Page Heading" description="">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="tag" type="list" default="h1" label="Tag of text" description="">
+					<option value="h1">h1</option>
+					<option value="h2">h2</option>
+					<option value="h3">h3</option>
+					<option value="h4">h4</option>
+					<option value="h5">h5</option>
+					<option value="h6">h6</option>
+					<option value="p">p</option>
+					<option value="span">span</option>
+					<option value="div">div</option>
+				</field>
+				<field name="float" type="list" default="" label="Floating of text" description="">
+					<option value=""></option>
+					<option value="pull-left">Left</option>
+					<option value="pull-right">Right</option>
+				</field>
+				<field name="classes" type="text" default="" label="Additional classes" description="" />
+				<field name="styles" type="text" default="" label="Additional styles" description="" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
